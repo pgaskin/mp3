@@ -1,10 +1,8 @@
 // Package mp3 implements the [ISO/IEC 11172-3:1993] bitstream with support for
 // the extensions in [ISO/IEC 13818-3:1998] section 2.4.1.
 //
-// [ISO/IEC 11172-3:1993]:
-// https://www.iso.org/standard/22412.html
-// [ISO/IEC 13818-3:1998]:
-// https://www.iso.org/standard/26797.html
+// [ISO/IEC 11172-3:1993]: https://www.iso.org/standard/22412.html
+// [ISO/IEC 13818-3:1998]: https://www.iso.org/standard/26797.html
 package mp3
 
 // links to copies of draft standards:
