@@ -9,6 +9,7 @@ import (
 	"path"
 	"strings"
 	"testing"
+	"time"
 )
 
 //go:embed testdata
@@ -47,11 +48,13 @@ func testRoundtrip(t *testing.T, buf []byte) {
 	r := NewReader(bytes.NewReader(buf), 16384)
 	n := 0         // frame number
 	o := Sync(buf) // expected offset
+	ts := time.Duration(0)
 	for r.Next() {
 		n++
 		if *VerboseFrame {
-			t.Logf("read [% 4d] % 6d + % 4d :: %s\n", n, r.Offset(), len(r.Raw()), r.Header())
+			t.Logf("read [% 4d] % 6d + % 4d (%.3fs) :: %s\n", n, r.Offset()-int64(len(r.Raw())), len(r.Raw()), ts.Seconds(), r.Header())
 		}
+		ts = r.Time()
 
 		o += len(r.Raw())
 		if o != int(r.Offset()) {
@@ -67,7 +70,7 @@ func testRoundtrip(t *testing.T, buf []byte) {
 	if n == 0 {
 		t.Errorf("no frames read?!?")
 	} else {
-		t.Logf("read %d frames", n)
+		t.Logf("read %d frames (%s)", n, ts)
 	}
 	err := r.Err()
 	if err != nil {
@@ -93,5 +96,13 @@ func testRoundtrip(t *testing.T, buf []byte) {
 	if err != nil {
 		t.Errorf("read frames: %v", err)
 	}
+
+	// this one is an interesting VBR one, so it's a good test case for this
+	if strings.HasSuffix(t.Name(), "/layer3/he_48khz") {
+		if act, exp := r.Time().Truncate(time.Millisecond).String(), "3.6s"; act != exp {
+			t.Errorf("expected duration %s, got %s", act, exp)
+		}
+	}
+
 	// TODO: test writing back
 }

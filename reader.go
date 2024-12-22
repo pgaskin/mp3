@@ -6,6 +6,7 @@ import (
 	"errors"
 	"io"
 	"strconv"
+	"time"
 )
 
 // Reader reads frames of an audio stream.
@@ -16,6 +17,8 @@ type Reader struct {
 
 	header FrameHeader
 	data   []byte
+
+	time time.Duration
 }
 
 // NewReader creates a new reader reading from r. The specified buffer size must
@@ -32,7 +35,7 @@ func NewReader(r io.Reader, buffer int) *Reader {
 
 // Reset clears the buffered data and error, replacing the underlying reader and
 // the current offset. If offset is 0, the stream is resynchronized on the next
-// call to Next.
+// call to Next. The time is not reset.
 func (r *Reader) Reset(x io.Reader, offset int64) {
 	if offset < 0 {
 		offset = 0
@@ -100,17 +103,16 @@ func (r *Reader) next() error {
 	default:
 		return errors.New("invalid mpeg version")
 	}
-
 	switch r.header.Layer {
 	case MPEGLayerI, MPEGLayerII, MPEGLayerIII:
 	default:
 		return errors.New("invalid mpeg layer")
 	}
-
 	if _, ok := r.header.Bitrate(); !ok {
 		return errors.New("invalid bitrate index")
 	}
-	if _, ok := r.header.SamplingFrequency(); !ok {
+	samplingFrequency, ok := r.header.SamplingFrequency()
+	if !ok {
 		return errors.New("invalid sampling frequency index")
 	}
 
@@ -124,6 +126,12 @@ func (r *Reader) next() error {
 			panic("wtf") // this should never fail if the checks above passed
 		}
 	}
+
+	sampleCount, ok := r.header.SampleCount()
+	if !ok {
+		panic("wtf") // this should never fail
+	}
+	r.time += time.Second * time.Duration(sampleCount) / time.Duration(samplingFrequency)
 
 	slotSize, ok := r.header.SlotSize()
 	if !ok {
@@ -184,6 +192,11 @@ func (r *Reader) ErrorCheck() (uint16, bool) {
 		return 0, false
 	}
 	return binary.BigEndian.Uint16(r.data[FrameHeaderSize : FrameHeaderSize+2]), true
+}
+
+// Time returns the elapsed time of all frames which have been read.
+func (r *Reader) Time() time.Duration {
+	return r.time
 }
 
 // TODO: func (r *Reader) Padding() ([]byte, bool)
