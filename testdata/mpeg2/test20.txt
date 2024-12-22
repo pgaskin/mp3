@@ -1,0 +1,34 @@
+ test20
+--------
+Layer             : II  
+Protection        : yes
+Bitrate base      : variable
+Sampling rate     : 44.1 kHz
+Private bit       : 0
+Mode              : stereo
+Copyright         : no
+Original          : yes
+Emphasis          : none (flat)
+
+Configuration     : 3/2.0
+Extension         : yes
+Bitrate extension : variable
+Matrix procedure  : 0
+Dynamic crosstalk : yes
+Dynamic crosstalk : yes
+Phantom centre    : no
+Prediction        : no
+Multilingual      : no
+Multilingual fs   : not applicable
+
+Ancillary data    : none
+
+Nr. of frames     : 27
+Test signal       : linear sine sweep, -6 dB, 20 Hz..15000 Hz
+Files             : test20.mpg
+                    test20_l.pcm   (16 bit/sample)
+                    test20_r.pcm   (16 bit/sample)
+                    test20_c.pcm   (16 bit/sample)
+                    test20_ls.pcm  (16 bit/sample)
+                    test20_rs.pcm  (16 bit/sample)
+                    test20.info

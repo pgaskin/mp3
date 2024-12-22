@@ -1,0 +1,42 @@
+
+
+  ********************************************************
+  *                                                      *
+  *  MPEG2 BIT STREAM DESCRIPTION FILE  (c) Philips 1997 *
+  *                                                      *
+  *  MULTI CHANNEL                                       *
+  *                                                      *
+  ********************************************************
+
+
+
+
+  bit stream(s)    : test4.mpg
+  decoded files    : test4_l.pcm
+                     test4_r.pcm
+                     test4_c.pcm
+                     
+
+  MPEG1 COMPATIBLE PART 
+
+  bitrate            :        256 kbit/s 
+  layer              :	       II 
+  sampling frequency :	    48.00 kHz 
+  number of subbands :	       27 
+  mode               : 	   stereo 
+  CRC protection     :         on 
+  
+
+  MULTICHANNEL EXTENSION 
+
+  center channel                 :present 
+  phantom coding                 :     on 
+  surround channels              :   none
+  LFE channel                    :   none
+  presentation matrix            :      0
+  number of multilingual channel :      0 
+  additional bitstream           :   none  
+  dynamic_crosstalk              :    off
+  prediction                     :    off
+  
+

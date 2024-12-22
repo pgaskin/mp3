@@ -1,0 +1,40 @@
+ test21
+--------
+Layer             : II 
+Protection        : no
+Bitrate base      : VBR
+Sampling rate     : 44.1 kHz
+Private bit       : 0
+Mode              : stereo
+Copyright         : no
+Original          : yes
+Emphasis          : none (flat)
+
+Configuration     : 3/2.0
+Extension         : yes
+Bitrate extension : VBR
+Matrix procedure  : 0
+Dynamic crosstalk : no
+Phantom centre    : no
+Prediction        : no
+Multilingual      : no
+Multilingual fs   : n.a.
+
+Ancillary data    : none
+
+Remark:	          : Variable bit rate, total average about 384 kbit/s,
+                    low bit rates are included in the base stream.
+		    
+Nr. of frames     : 30
+Test signal       : left channel: female english speech;
+                    right channel: male english speech;
+                    center channel: female french speech;
+                    surroud channels: stereo castanets signal;
+Files             : test21.mpg
+                    test21.ext
+                    test21_l.pcm   (16 bit/sample)
+                    test21_r.pcm   (16 bit/sample)
+                    test21_c.pcm   (16 bit/sample)
+                    test21_ls.pcm  (16 bit/sample)
+                    test21_rs.pcm  (16 bit/sample)
+                    test21.info

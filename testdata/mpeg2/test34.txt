@@ -1,0 +1,32 @@
+ test34
+--------
+Layer             : II
+Protection        : yes
+Bitrate base      : 160 kbit/s
+Sampling rate     : 24 kHz
+Private bit       : 0
+Mode              : stereo
+Copyright         : no
+Original          : yes
+Emphasis          : none (flat)
+
+Configuration     : 2/0.0
+Extension         : not applicable
+Bitrate extension : not applicable
+Matrix procedure  : not applicable
+Matrix attenuation: not applicable
+Phantom centre    : not applicable
+Prediction        : not applicable
+Multilingual      : not applicable
+Multilingual fs   : not applicable
+
+Ancillary data    : none
+
+Nr. of frames     : 27
+Test signal       : linear sine sweep, -20 dB, 20 Hz..10000 Hz;
+                    intended for accuracy test. Decoded audio
+		    in *.pcm represented with 24 bit accuracy.
+Files             : test34.mpg
+                    test34_l.pcm
+                    test34_r.pcm
+                    test34.info

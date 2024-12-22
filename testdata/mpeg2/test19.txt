@@ -1,0 +1,41 @@
+
+
+  ********************************************************
+  *                                                      *
+  *  MPEG2 BIT STREAM DESCRIPTION FILE   (c) CCETT 1995  *
+  *                                                      *
+  *  MULTI CHANNEL                                       *
+  *                                                      *
+  ********************************************************
+
+
+
+
+  bit stream(s)    : test19.mpg
+  decoded files    : test19_l.pcm
+                     test19_r.pcm
+                     test19_s.pcm
+                     
+
+  MPEG1 COMPATIBLE PART 
+
+  bitrate            :        384 kbit/s 
+  layer              :	       II 
+  sampling frequency :	    48.00 kHz 
+  number of subbands :	       27 
+  mode               : 	   stereo 
+  CRC protection     :         on 
+  
+
+  MULTICHANNEL EXTENSION 
+
+  center channel                 :   none 
+  surround channels              :   Mono
+  LFE channel                    :   none
+  presentation matrix            :      0
+  number of multilingual channel :      0 
+  additional bitstream           :   none  
+  dynamic_crosstalk              :     on
+  prediction                     :    off
+  
+

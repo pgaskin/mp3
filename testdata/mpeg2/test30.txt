@@ -1,0 +1,29 @@
+ test30
+--------
+Layer             : II
+Protection        : yes
+Bitrate base      :  96 kbit/s
+Sampling rate     : 24 kHz
+Private bit       : 0
+Mode              : single channel
+Copyright         : no
+Original          : yes
+Emphasis          : none (flat)
+
+Configuration     : 2/0.0
+Extension         : not applicable
+Bitrate extension : not applicable
+Matrix procedure  : not applicable
+Matrix attenuation: not applicable
+Phantom centre    : not applicable
+Prediction        : not applicable
+Multilingual      : not applicable
+Multilingual fs   : not applicable
+
+Ancillary data    : none
+
+Nr. of frames     : 27
+Test signal       : linear sine sweep, -6 dB, 20 Hz..10500 Hz
+Files             : test30.mpg
+                    test30.pcm
+                    test30.info

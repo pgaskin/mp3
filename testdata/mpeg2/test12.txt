@@ -1,0 +1,44 @@
+ test12
+--------
+Layer             : II 
+Protection        : no
+Bitrate base      : 384 kbit/s
+Sampling rate     : 48 kHz
+Private bit       : 0
+Mode              : stereo
+Copyright         : no
+Original          : yes
+Emphasis          : none (flat)
+
+Configuration     : 3/2.0
+Extension         : yes
+Bitrate extension : 384 kbit/s
+Matrix procedure  : 0
+Dynamic crosstalk : no
+Phantom centre    : no
+Prediction        : no
+Multilingual      : 7 channels
+Multilingual fs   : 24 kHz
+
+Ancillary data    : none
+
+Nr. of frames     : 20
+Test signal       : left channel: female english speech;
+                    right channel: male english speech;
+                    center channel: female french speech;
+                    surroud channels: stereo castanets signal;
+Files             : test12.mpg
+                    test12.ext
+                    test12_l.pcm   (16 bit/sample)
+                    test12_r.pcm   (16 bit/sample)
+                    test12_c.pcm   (16 bit/sample)
+                    test12_ls.pcm  (16 bit/sample)
+                    test12_rs.pcm  (16 bit/sample)
+                    test12_m1.pcm  (16 bit/sample)
+                    test12_m2.pcm  (16 bit/sample)
+                    test12_m3.pcm  (16 bit/sample)
+                    test12_m4.pcm  (16 bit/sample)
+                    test12_m5.pcm  (16 bit/sample)
+                    test12_m6.pcm  (16 bit/sample)
+                    test12_m7.pcm  (16 bit/sample)
+                    test12.info

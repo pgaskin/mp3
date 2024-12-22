@@ -1,0 +1,35 @@
+ test11
+--------
+Layer             : II  
+Protection        : yes
+Bitrate base      : 384000
+Sampling rate     : 44.1 kHz
+Private bit       : 0
+Mode              : stereo
+Copyright         : no
+Original          : yes
+Emphasis          : none (flat)
+
+Configuration     : 3/2.0
+Extension         : no
+Bitrate extension : not applicable
+Matrix procedure  : 2
+Dynamic crosstalk : no
+Phantom centre    : no
+Prediction        : no
+Multilingual      : no
+Multilingual fs   : not applicable
+
+Ancillary data    : none
+
+Nr. of frames     : 27
+Test signal       : composed of music signals;
+                    3 different mono signals (l,c,r) plus 
+                    2-channel stereo signal (ls,rs)
+Files             : test11.mpg
+                    test11_l.pcm   (16 bit/sample)
+                    test11_r.pcm   (16 bit/sample)
+                    test11_c.pcm   (16 bit/sample)
+                    test11_ls.pcm  (16 bit/sample)
+                    test11_rs.pcm  (16 bit/sample)
+                    test11.info

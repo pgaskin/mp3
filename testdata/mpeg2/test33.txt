@@ -1,0 +1,30 @@
+ test33
+--------
+Layer             : I
+Protection        : yes
+Bitrate base      : 128 kbit/s
+Sampling rate     : 22.05 kHz
+Private bit       : 0
+Mode              : rotating per frame: joint stereo 4, 8, 12, 16, stereo,... 
+Copyright         : no
+Original          : yes
+Emphasis          : none (flat)
+
+Configuration     : 2/0.0
+Extension         : not applicable
+Bitrate extension : not applicable
+Matrix procedure  : not applicable
+Matrix attenuation: not applicable
+Phantom centre    : not applicable
+Prediction        : not applicable
+Multilingual      : not applicable
+Multilingual fs   : not applicable
+
+Ancillary data    : none
+
+Nr. of frames     : 81
+Test signal       : linear sine sweep, -6 dB, 20 Hz..9646.875 Hz
+Files             : test33.mpg
+                    test33_l.pcm
+                    test33_r.pcm
+                    test33.info

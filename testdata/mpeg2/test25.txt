@@ -1,0 +1,30 @@
+ test25
+--------
+Layer             : II
+Protection        : yes
+Bitrate base      :  96 kbit/s
+Sampling rate     : 22.05 kHz
+Private bit       : 0
+Mode              : rotating per frame: joint stereo 4, 8, 12, 16, stereo,... 
+Copyright         : no
+Original          : yes
+Emphasis          : none (flat)
+
+Configuration     : 2/0.0
+Extension         : not applicable
+Bitrate extension : not applicable
+Matrix procedure  : not applicable
+Matrix attenuation: not applicable
+Phantom centre    : not applicable
+Prediction        : not applicable
+Multilingual      : not applicable
+Multilingual fs   : not applicable
+
+Ancillary data    : none
+
+Nr. of frames     : 27
+Test signal       : linear sine sweep, -6 dB, 20 Hz..9646.875 Hz
+Files             : test25.mpg
+                    test25_l.pcm
+                    test25_r.pcm
+                    test25.info

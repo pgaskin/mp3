@@ -1,0 +1,36 @@
+ test35
+--------
+Layer             : II  
+Protection        : no
+Bitrate base      : 384 kbit/s
+Sampling rate     : 44.1 kHz
+Private bit       : 0
+Mode              : stereo
+Copyright         : no
+Original          : yes
+Emphasis          : none (flat)
+
+Configuration     : 3/2.0
+Extension         : no
+Bitrate extension : not applicable
+Matrix procedure  : 3
+Dynamic crosstalk : no
+Phantom centre    : no
+Prediction        : no
+Multilingual      : no
+Multilingual fs   : not applicable
+
+Ancillary data    : none
+
+Nr. of frames     : 27
+Test signal       : linear sine sweep, -20 dB, 20 Hz..10000 Hz;
+                    intended for accuracy test. Decoded audio
+		    in *.pcm is therefore represented with 24 bit 
+		    accuracy.
+Files             : test35.mpg
+                    test35_l.pcm   (24 bit/sample)
+                    test35_r.pcm   (24 bit/sample)
+                    test35_c.pcm   (24 bit/sample)
+                    test35_ls.pcm  (24 bit/sample)
+                    test35_rs.pcm  (24 bit/sample)
+                    test35.info
