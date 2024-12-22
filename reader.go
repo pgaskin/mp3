@@ -58,8 +58,12 @@ func (r *Reader) Err() error {
 
 // Next reads a complete frame. It does not do anymore validation than strictly
 // necessary. It must be called before the first frame is read. If an error
-// occurs, false is returned. A frame starts with a syncword, and ends just
-// before the next syncword.
+// occurs, false is returned.
+//
+// A frame starts with a syncword, and ends just before the next syncword. As
+// such, the reader offset minus the length of the raw frame is the offset of
+// the start of the frame, and the total length of all raw frames plus the
+// offset of the first syncword equals the length of the stream.
 func (r *Reader) Next() bool {
 	if r.err != nil {
 		return false

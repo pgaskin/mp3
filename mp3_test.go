@@ -45,11 +45,23 @@ func testRoundtrip(t *testing.T, buf []byte) {
 		t.SkipNow() // not implemented yet
 	}
 	r := NewReader(bytes.NewReader(buf), 16384)
-	n := 0
+	n := 0         // frame number
+	o := Sync(buf) // expected offset
 	for r.Next() {
 		n++
 		if *VerboseFrame {
 			t.Logf("read [% 4d] % 6d + % 4d :: %s\n", n, r.Offset(), len(r.Raw()), r.Header())
+		}
+
+		o += len(r.Raw())
+		if o != int(r.Offset()) {
+			t.Errorf("frame %d: frames are not back-to-back after first syncword", n)
+		}
+
+		buf, _ := r.Header().AppendBinary(nil)
+		buf = append(buf, r.Raw()[FrameHeaderSize:]...)
+		if !bytes.Equal(r.Raw(), buf) {
+			t.Errorf("frame %d: re-encoded frame differs", n)
 		}
 	}
 	if n == 0 {
